@@ -1,0 +1,32 @@
+<resources>
+
+    <string name="app_name">HUDuino</string>
+    <string name="service_label">NotificationService</string>
+    <string name="notification_listener_service">"HUDuino Notification Listener"</string>
+    <string name="notification_listener_service_explanation">"We need to access your phone notifications.¿Can you give us this access?"</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="socket_error_title">Bluetooth error</string>
+    <string name="sensor_val">- ºC</string>
+    <string name="paired_device">No paired device found.</string>
+    <string name="notification_received">Without notifications</string>
+    <string name="speed_data">Speed</string>
+    <string name="metric_imperial">Metric Units (km/h)</string>
+    <string name="socket_error_message">Error starting connection with the HC-06 device. Connect the device?</string>
+    <string name="app_about_text">App made by Álvaro Rubio and Francisco Cirka</string>
+    <string name="app_help_text">You only need give permissions to the app and make sure the  HUD are powered on before open the application</string>
+    <string name="app_contact_text">You can contact with us from: alruad@gmail.com</string>
+    <string name="metric_units">Metric Units (km/h)</string>
+    <string name="imperial_units">Imperial Units (mph)</string>
+    <string name="facebook_notification">Facebook Notification</string>
+    <string name="instagram_notification">Instagram Notification</string>
+    <string name="whatsapp_notification">Whatsapp Notification</string>
+    <string name="call_notification">In-Call Notification</string>
+    <string name="other_notification">Other Notification</string>
+    <string name="metric_speed_zeroed">0 km/h</string>
+    <string name="imperial_speed_zeroed">0 mph</string>
+    <string name="contact_title">Contact</string>
+    <string name="help_title">Help</string>
+    <string name="about_title">About</string>
+
+</resources>
