@@ -6,7 +6,7 @@
     android:orientation="vertical"
     android:background="@color/darkGrey">
         <TextView
-            android:id="@+id/device_info"
+            android:id="@+id/text_device_info"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
@@ -14,7 +14,7 @@
             android:textSize="18sp"
             android:textColor="@color/white"/>
         <TextView
-            android:id="@+id/notification_data"
+            android:id="@+id/text_notification_data"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
@@ -22,7 +22,7 @@
             android:textSize="30sp"
             android:textColor="@color/white"/>
         <TextView
-            android:id="@+id/speed_data"
+            android:id="@+id/text_speed_data"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
@@ -31,7 +31,7 @@
             android:textSize="100sp"
             android:visibility="visible" />
         <androidx.appcompat.widget.SwitchCompat
-            android:id="@+id/metric_imperial_switch"
+            android:id="@+id/switch_metric_imperial"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
@@ -41,7 +41,7 @@
             android:textColor="#FFFFFF"
             android:text="@string/metric_imperial"/>
         <TextView
-            android:id="@+id/sensor_data"
+            android:id="@+id/text_sensor_data"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"

@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">HUDuino</string>
+    <string name="service_label">NotificationService</string>
+    <string name="notification_listener_service">"HUDuino Notification Listener"</string>
+    <string name="notification_listener_service_explanation">"Necesito acceso para obtener las notificaciones de tu teléfono.¿Podrías darme acceso?"</string>
+    <string name="yes">Si</string>
+    <string name="no">No</string>
+    <string name="socket_error_title">Error bluetooth</string>
+    <string name="sensor_val">- ºC</string>
+    <string name="paired_device">No hay dispositivos vinculados</string>
+    <string name="notification_received">Sin notificaciones</string>
+    <string name="speed_data">Velocidad</string>
+    <string name="metric_imperial">Unidades métricas (km/h)</string>
+    <string name="socket_error_message">Error en la comunicación con el dispositivo HC-06. ¿Está encendido?</string>
+    <string name="app_about_text">App hecha por Álvaro Rubio y Francisco Cirka</string>
+    <string name="app_help_text">Solo tienes que dar permisos a la aplicación y asegurarte que el HUD esté encendido antes de abrir la aplicación</string>
+    <string name="app_contact_text">Puedes contactar con nosotros en: alruad@gmail.com</string>
+    <string name="metric_units">Unidades métricas (km/h)</string>
+    <string name="imperial_units">Unidades imperiales (mph)</string>
+    <string name="facebook_notification">Notificación de Facebook</string>
+    <string name="instagram_notification">Notificación de Instagram</string>
+    <string name="whatsapp_notification">Notificación de Whatsapp</string>
+    <string name="call_notification">Notificación de llamada</string>
+    <string name="other_notification">Otra Notification</string>
+    <string name="metric_speed_zeroed">0 km/h</string>
+    <string name="imperial_speed_zeroed">0 mph</string>
+    <string name="contact_title">Contacto</string>
+    <string name="help_title">Ayuda</string>
+    <string name="about_title">Acerca de...</string>
+
+</resources>

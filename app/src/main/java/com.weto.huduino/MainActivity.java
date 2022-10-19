@@ -42,19 +42,19 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
     private ChangeBroadcastReceiver ChangeBroadcastReceiver;
 
     // GUI
-    private TextView interceptedNotificationTextView;
-    private TextView sensorTextView;
-    private TextView deviceTextView;
-    private TextView speedTextView;
-    private SwitchCompat metric_imperial_switch;
+    private TextView notificationData;
+    private TextView sensorData;
+    private TextView deviceInfo;
+    private TextView speedData;
+    private SwitchCompat metricImperial;
 
     // BT
     private boolean socketOk = false;
-    private String deviceItem = String.valueOf(R.string.paired_device);
     private String deviceOk = " - Not connected";
+    private String deviceItem = String.valueOf(R.string.paired_device);
     private final UUID spp = UUID.fromString("00001101-0000-1000-8000-00805F9B34FB");
     private final BluetoothAdapter bluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
-    public static final String TAG = "HUDuino";
+    public static final String sTag = "HUDuino";
     private ConnectedThread mConnectedThread;
     private byte[] bytes;
 
@@ -65,11 +65,11 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
         setContentView(R.layout.activity_main);
 
         // Find the GUI objects on activity_main.xml
-        interceptedNotificationTextView = this.findViewById(R.id.notification_data);
-        deviceTextView = this.findViewById(R.id.device_info);
-        sensorTextView = this.findViewById(R.id.sensor_data);
-        metric_imperial_switch = this.findViewById(R.id.metric_imperial_switch);
-        speedTextView = this.findViewById(R.id.speed_data);
+        notificationData = this.findViewById(R.id.text_notification_data);
+        deviceInfo = this.findViewById(R.id.text_device_info);
+        sensorData = this.findViewById(R.id.text_sensor_data);
+        metricImperial = this.findViewById(R.id.switch_metric_imperial);
+        speedData = this.findViewById(R.id.text_speed_data);
 
         // If the user did not turn the notification listener service on we prompt him to do so
         if (!isNotificationServiceEnabled()) {
@@ -95,8 +95,8 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
                 String deviceName = device.getName();
                 if (deviceName.equals("HC-06")) {
                     String deviceHardwareAddress = device.getAddress(); // MAC address
-                    deviceTextView.setText(String.format("%s : %s", deviceName, deviceHardwareAddress));
-                    deviceItem = deviceTextView.getText().toString();
+                    deviceInfo.setText(String.format("%s : %s", deviceName, deviceHardwareAddress));
+                    deviceItem = deviceInfo.getText().toString();
                     ConnectThread connect = new ConnectThread(device);
                     new Thread(connect).start();
                 }
@@ -106,17 +106,17 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
         if (checkSelfPermission(Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
             requestPermissions(new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, 1000);
         } else {
-            lState();
+            locationState();
             this.updateSpeed(null);
         }
 
-        metric_imperial_switch.setOnCheckedChangeListener((compoundButton, b) -> {
+        metricImperial.setOnCheckedChangeListener((compoundButton, b) -> {
             MainActivity.this.updateSpeed(null);
-            if(metric_imperial_switch.isChecked()){
-                metric_imperial_switch.setText(R.string.metric_units);
+            if(metricImperial.isChecked()){
+                metricImperial.setText(R.string.metric_units);
             }
             else{
-                metric_imperial_switch.setText(R.string.imperial_units);
+                metricImperial.setText(R.string.imperial_units);
             }
         });
     }
@@ -130,13 +130,13 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()){
-            case R.id.about_item:
+            case R.id.item_about:
                 Toast.makeText(this, R.string.app_about_text, Toast.LENGTH_SHORT).show();
                 break;
-            case R.id.help_item:
+            case R.id.item_help:
                 Toast.makeText(this, R.string.app_help_text, Toast.LENGTH_LONG).show();
                 break;
-            case R.id.contact_item:
+            case R.id.item_contact:
                 Toast.makeText(this, R.string.app_contact_text, Toast.LENGTH_SHORT).show();
                 break;
         }
@@ -149,45 +149,32 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
         unregisterReceiver(ChangeBroadcastReceiver);
     }
 
-    private void NotificationInterceptAndView(int notificationCode) {
+    private void receiveNotification(int notificationCode) {
+        notificationData.setTextColor(Color.RED);
         switch (notificationCode) {
             case NotificationService.InterceptedNotificationCode.FACEBOOK_CODE:
-                interceptedNotificationTextView.setTextColor(Color.RED);
-                interceptedNotificationTextView.setText(R.string.facebook_notification);
-                bytes = interceptedNotificationTextView.getText().toString().getBytes(Charset.defaultCharset());
-                if(socketOk) {mConnectedThread.write(bytes);}
+                notificationData.setText(R.string.facebook_notification);
                 break;
             case NotificationService.InterceptedNotificationCode.INSTAGRAM_CODE:
-                interceptedNotificationTextView.setTextColor(Color.RED);
-                interceptedNotificationTextView.setText(R.string.instagram_notification);
-                bytes = interceptedNotificationTextView.getText().toString().getBytes(Charset.defaultCharset());
-                if(socketOk) {mConnectedThread.write(bytes);}
+                notificationData.setText(R.string.instagram_notification);
                 break;
             case NotificationService.InterceptedNotificationCode.WHATSAPP_CODE:
-                interceptedNotificationTextView.setTextColor(Color.RED);
-                interceptedNotificationTextView.setText(R.string.whatsapp_notification);
-                bytes = interceptedNotificationTextView.getText().toString().getBytes(Charset.defaultCharset());
-                if(socketOk) {mConnectedThread.write(bytes);}
+                notificationData.setText(R.string.whatsapp_notification);
                 break;
             case NotificationService.InterceptedNotificationCode.DIALER_CODE:
-                interceptedNotificationTextView.setTextColor(Color.RED);
-                interceptedNotificationTextView.setText(R.string.call_notification);
-                bytes = interceptedNotificationTextView.getText().toString().getBytes(Charset.defaultCharset());
-                if(socketOk) {mConnectedThread.write(bytes);}
+                notificationData.setText(R.string.call_notification);
                 break;
             case NotificationService.InterceptedNotificationCode.OTHER_NOTIFICATIONS_CODE:
-                interceptedNotificationTextView.setTextColor(Color.RED);
-                interceptedNotificationTextView.setText(R.string.other_notification);
-                bytes = interceptedNotificationTextView.getText().toString().getBytes(Charset.defaultCharset());
-                if(socketOk) {mConnectedThread.write(bytes);}
+                notificationData.setText(R.string.other_notification);
                 break;
         }
+        bytes = notificationData.getText().toString().getBytes(Charset.defaultCharset());
+        if(socketOk) {mConnectedThread.write(bytes);}
     }
 
     private boolean isNotificationServiceEnabled() {
         String pkgName = getPackageName();
-        final String flat = Settings.Secure.getString(getContentResolver(),
-                ENABLED_NOTIFICATION_LISTENERS);
+        final String flat = Settings.Secure.getString(getContentResolver(), ENABLED_NOTIFICATION_LISTENERS);
         if (!TextUtils.isEmpty(flat)) {
             final String[] names = flat.split(":");
             for (String name : names) {
@@ -203,12 +190,14 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
     }
 
     public class ChangeBroadcastReceiver extends BroadcastReceiver {
+
         @Override
         public void onReceive(Context context, Intent intent) {
             int receivedNotificationCode = intent.getIntExtra("Notification Code", -1);
-            NotificationInterceptAndView(receivedNotificationCode);
+            receiveNotification(receivedNotificationCode);
         }
     }
+
     @Override
     public void onLocationChanged(Location location) {
         if (location != null) {
@@ -216,57 +205,53 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
             this.updateSpeed(currLocation);
         }
         else {
-            Log.e(TAG,"Location is null, check gps and locations permissions");
+            Log.e(sTag,"Location is null, check gps and locations permissions");
         }
     }
 
     private boolean useMetricUnits() {
-        return metric_imperial_switch.isChecked();
+        return metricImperial.isChecked();
     }
 
-    // Three next @Overrides cant be deleted because Mainactivity must be abstract.
     @Override
     public void onStatusChanged(String s, int i, Bundle bundle) {
-
+        // @Override cant be deleted because MainActivity must be abstract.
     }
 
     @Override
     public void onProviderEnabled(String s) {
-
+        // @Override cant be deleted because MainActivity must be abstract.
     }
 
     @Override
     public void onProviderDisabled(String s) {
-
+        // @Override cant be deleted because MainActivity must be abstract.
     }
 
     private AlertDialog buildNotificationServiceAlertDialog() {
         AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
         alertDialogBuilder.setTitle(R.string.notification_listener_service);
         alertDialogBuilder.setMessage(R.string.notification_listener_service_explanation);
-        alertDialogBuilder.setPositiveButton(R.string.yes,
-                (dialog, id) -> startActivity(new Intent(ACTION_NOTIFICATION_LISTENER_SETTINGS)));
-        alertDialogBuilder.setNegativeButton(R.string.no,
-                (dialog, id) -> {
-                    android.os.Process.killProcess(android.os.Process.myPid());
-                    Log.e("error", "The user has denied the notification access");
-                    System.exit(1);
-                });
+        alertDialogBuilder.setPositiveButton(R.string.yes, (dialog, id) -> startActivity(new Intent(ACTION_NOTIFICATION_LISTENER_SETTINGS)));
+        alertDialogBuilder.setNegativeButton(R.string.no, (dialog, id) -> {
+            android.os.Process.killProcess(android.os.Process.myPid());
+            Log.e("error", "The user has denied the notification access");
+            System.exit(1);
+        });
         return (alertDialogBuilder.create());
     }
 
     // Bluetooth classes and functions
     public class ConnectThread extends Thread {
         private final BluetoothSocket mmSocket;
-
-
+        
         @SuppressLint("MissingPermission")
         public ConnectThread(BluetoothDevice device) {
             BluetoothSocket tmp = null;
             try {
                 tmp = device.createRfcommSocketToServiceRecord(spp);
             } catch (IOException e) {
-                Log.e(TAG, "Socket's create() method failed", e);
+                Log.e(sTag, "Socket's create() method failed", e);
             }
             mmSocket = tmp;
         }
@@ -284,17 +269,17 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
                     socketOk = false;
                     deviceOk = " - Not connected";
                 } catch (IOException closeException) {
-                    Log.e(TAG, "Could not close the client socket", closeException);
+                    Log.e(sTag, "Could not close the client socket", closeException);
                 }
-                runOnUiThread(() -> deviceTextView.setText(String.format("%s%s", deviceItem, deviceOk)));
+                runOnUiThread(() -> deviceInfo.setText(String.format("%s%s", deviceItem, deviceOk)));
                 return;
             }
-            runOnUiThread(() -> deviceTextView.setText(String.format("%s%s", deviceItem, deviceOk)));
+            runOnUiThread(() -> deviceInfo.setText(String.format("%s%s", deviceItem, deviceOk)));
             manageMyConnectedSocket(mmSocket);
         }
 
         private void manageMyConnectedSocket(BluetoothSocket mmSocket) {
-            Log.d(TAG, "manageMyConnectedSocket: Starting.");
+            Log.d(sTag, "manageMyConnectedSocket: Starting.");
             mConnectedThread = new ConnectedThread(mmSocket);
             mConnectedThread.start();
         }
@@ -310,12 +295,12 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
             try {
                 tmpIn = socket.getInputStream();
             } catch (IOException e) {
-                Log.e(TAG, "Error occurred when creating input stream", e);
+                Log.e(sTag, "Error occurred when creating input stream", e);
             }
             try {
                 tmpOut = socket.getOutputStream();
             } catch (IOException e) {
-                Log.e(TAG, "Error occurred when creating output stream", e);
+                Log.e(sTag, "Error occurred when creating output stream", e);
             }
             mmInStream = tmpIn;
             mmOutStream = tmpOut;
@@ -329,10 +314,10 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
                 try {
                     numBytes = mmInStream.read(mmBuffer);
                     final String incomingMessage = new String(mmBuffer, 0, numBytes);
-                    Log.d(TAG, "InputStream: " + incomingMessage);
-                    runOnUiThread(() -> sensorTextView.setText(String.format("%s ºC", incomingMessage)));
+                    Log.d(sTag, "InputStream: " + incomingMessage);
+                    runOnUiThread(() -> sensorData.setText(String.format("%s ºC", incomingMessage)));
                 } catch (IOException e) {
-                    Log.d(TAG, "Input stream was disconnected", e);
+                    Log.d(sTag, "Input stream was disconnected", e);
                     break;
                 }
             }
@@ -342,47 +327,46 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
         public void write(byte[] bytes) {
             try {
                 mmOutStream.write(bytes);
-                //writtenMsg.sendToTarget();
             } catch (IOException e) {
-                Log.e(TAG, "Error occurred when sending data", e);
+                Log.e(sTag, "Error occurred when sending data", e);
             }
         }
     }
 
     //update speed functions
     @SuppressLint("MissingPermission")
-    private void lState() {
+    private void locationState() {
         LocationManager locationManager = (LocationManager) this.getSystemService(Context.LOCATION_SERVICE);
         if (locationManager != null) {
             locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 0, 0, this);
         }
     }
 
-       private void updateSpeed(CLocation location) {
+    private void updateSpeed(CLocation location) {
         float nCurrSpeed = 0;
         if (location != null) {
             location.setUseMetricUnits(this.useMetricUnits());
             nCurrSpeed = location.getSpeed();
         }
-           String strCurrSpeed = String.valueOf(Math.round(nCurrSpeed));
+        String strCurrSpeed = String.valueOf(Math.round(nCurrSpeed));
         if (this.useMetricUnits()) {
             String kmh = strCurrSpeed + " km/h";
             System.out.println(kmh);
-            speedTextView.setText(kmh);
+            speedData.setText(kmh);
             if (nCurrSpeed == 0) {
-                speedTextView.setText(R.string.metric_speed_zeroed);
+                speedData.setText(R.string.metric_speed_zeroed);
             }
             bytes = kmh.getBytes(Charset.defaultCharset());
-            if(socketOk) {mConnectedThread.write(bytes);}
-
+            if(socketOk) {
+                mConnectedThread.write(bytes);
+            }
         } else {
             String mph = strCurrSpeed + " mph";
             System.out.println(mph);
             if (nCurrSpeed == 0) {
-                speedTextView.setText(R.string.imperial_speed_zeroed);
+                speedData.setText(R.string.imperial_speed_zeroed);
             }
-            speedTextView.setText(mph);
-
+            speedData.setText(mph);
             bytes = mph.getBytes(Charset.defaultCharset());
             if(socketOk) {mConnectedThread.write(bytes);}
         }

@@ -3,7 +3,7 @@
     <string name="app_name">HUDuino</string>
     <string name="service_label">NotificationService</string>
     <string name="notification_listener_service">"HUDuino Notification Listener"</string>
-    <string name="notification_listener_service_explanation">"We need to access your phone notifications.¿Can you give us this access?"</string>
+    <string name="notification_listener_service_explanation">"We need to access your phone notifications. Can you give us this access?"</string>
     <string name="yes">Yes</string>
     <string name="no">No</string>
     <string name="socket_error_title">Bluetooth error</string>
