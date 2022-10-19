@@ -1,0 +1,30 @@
+<resources>
+    <string name="notification_listener_service_explanation">J\'ai besoin d\'un accès pour recevoir des notifications de votre téléphone. Pourriez-vous m\'accorder l\'accès?</string>
+    <string name="yes">Oui</string>
+    <string name="no">Non</string>
+    <string name="socket_error_title">Erreur de prise bluetooth</string>
+    <string name="sensor_val">- ºC</string>
+    <string name="paired_device">Aucun appareil lié</string>
+    <string name="notification_received">Aucune notification</string>
+    <string name="speed_data">La rapidité</string>
+    <string name="metric_imperial">Unités métriques (km/h)</string>
+    <string name="socket_error_message">Erreur de communication avec l\'appareil HC-06. C'est en marche?</string>
+    <string name="app_about_text">Application réalisée par Álvaro Rubio et Francisco Cirka</string>
+    <string name="app_help_text">Il vous suffit de donner les autorisations à l\'application et de vous assurer que le HUD est activé avant d\'ouvrir l\'application.</string>
+    <string name="app_contact_text">Vous pouvez nous contacter à : alruad@gmail.com</string>
+    <string name="metric_units">Unités métriques (km/h)</string>
+    <string name="imperial_units">Unités impériales (mph)</string>
+    <string name="facebook_notification">Avis d\'facebook</string>
+    <string name="instagram_notification">Avis d\'Instagram</string>
+    <string name="whatsapp_notification">Avis d\'Whatsapp</string>
+    <string name="call_notification">Avis d\'appel</string>
+    <string name="other_notification">autre avis</string>
+    <string name="contact_title">Contact</string>
+    <string name="help_title">Aide</string>
+    <string name="about_title">à propos de nous…</string>
+    <string name="reset_notification">J\'ai déjà lu les notifications</string>
+    <string name="notification_deleted">Suppression des notifications du téléphone et du HUD</string>
+    <string name="device_connected"> - Lié</string>
+    <string name="device_not_connected"> - Pas connecté</string>
+
+</resources>

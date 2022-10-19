@@ -1,9 +1,9 @@
 <resources>
 
-    <string name="app_name">HUDuino</string>
-    <string name="service_label">NotificationService</string>
-    <string name="notification_listener_service">"HUDuino Notification Listener"</string>
-    <string name="notification_listener_service_explanation">"We need to access your phone notifications. Can you give us this access?"</string>
+    <string name="app_name" translatable="false">HUDuino</string>
+    <string name="service_label" translatable="false">NotificationService</string>
+    <string name="notification_listener_service" translatable="false">HUDuino Notification Listener</string>
+    <string name="notification_listener_service_explanation">We need to access your phone notifications. Can you give us this access?</string>
     <string name="yes">Yes</string>
     <string name="no">No</string>
     <string name="socket_error_title">Bluetooth error</string>
@@ -23,10 +23,14 @@
     <string name="whatsapp_notification">Whatsapp Notification</string>
     <string name="call_notification">In-Call Notification</string>
     <string name="other_notification">Other Notification</string>
-    <string name="metric_speed_zeroed">0 km/h</string>
-    <string name="imperial_speed_zeroed">0 mph</string>
+    <string name="metric_speed_zeroed" translatable="false">0 km/h</string>
+    <string name="imperial_speed_zeroed" translatable="false">0 mph</string>
     <string name="contact_title">Contact</string>
     <string name="help_title">Help</string>
     <string name="about_title">About</string>
+    <string name="reset_notification">I have read notifications</string>
+    <string name="notification_deleted">Notifications deleted in the phone and HUD</string>
+    <string name="device_connected"> - Connected</string>
+    <string name="device_not_connected"> - Not Connected</string>
 
 </resources>

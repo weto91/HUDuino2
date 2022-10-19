@@ -1,0 +1,30 @@
+<resources>
+    <string name="notification_listener_service_explanation">Ho bisogno dell\'accesso per ricevere le notifiche dal tuo telefono. Potresti darmi l\'accesso?</string>
+    <string name="yes">Sì</string>
+    <string name="no">No</string>
+    <string name="socket_error_title">Errore presa bluetooth</string>
+    <string name="sensor_val">- ºC</string>
+    <string name="paired_device">Nessun dispositivo collegato</string>
+    <string name="notification_received">Nessuna notifica</string>
+    <string name="speed_data">Velocità</string>
+    <string name="metric_imperial">unità metrica (km/h)</string>
+    <string name="socket_error_message">Errore di comunicazione con il dispositivo HC-06. E \'acceso?</string>
+    <string name="app_about_text">App realizzata da Álvaro Rubio e Francisco Cirka</string>
+    <string name="app_help_text">Devi solo concedere le autorizzazioni all\'app e assicurarti che l\'HUD sia acceso prima di aprire l\'app.</string>
+    <string name="app_contact_text">Puoi contattarci a: alruad@gmail.com</string>
+    <string name="metric_units">unità metrica (km/h)</string>
+    <string name="imperial_units">unità imperiali (mph)</string>
+    <string name="facebook_notification">Notifica facebook</string>
+    <string name="instagram_notification">NNotifica Instagram</string>
+    <string name="whatsapp_notification">Notifica Whatsapp</string>
+    <string name="call_notification">Avviso di chiamata</string>
+    <string name="other_notification">Altra notifica</string>
+    <string name="contact_title">Contatto</string>
+    <string name="help_title">Aiuto</string>
+    <string name="about_title">Chi siamo…</string>
+    <string name="reset_notification">Ya lui leído le notifiche</string>
+    <string name="notification_deleted">Notifiche eliminate dal telefono e dall\'HUD</string>
+    <string name="device_connected"> - Conttato</string>
+    <string name="device_not_connected"> - Nessun collegamento</string>
+
+</resources>

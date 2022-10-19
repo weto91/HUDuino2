@@ -1,11 +1,8 @@
 <resources>
-    <string name="app_name">HUDuino</string>
-    <string name="service_label">NotificationService</string>
-    <string name="notification_listener_service">"HUDuino Notification Listener"</string>
-    <string name="notification_listener_service_explanation">"Necesito acceso para obtener las notificaciones de tu teléfono.¿Podrías darme acceso?"</string>
+    <string name="notification_listener_service_explanation">Necesito acceso para obtener las notificaciones de tu teléfono.¿Podrías darme acceso?</string>
     <string name="yes">Si</string>
     <string name="no">No</string>
-    <string name="socket_error_title">Error bluetooth</string>
+    <string name="socket_error_title">Error en el socket bluetooth</string>
     <string name="sensor_val">- ºC</string>
     <string name="paired_device">No hay dispositivos vinculados</string>
     <string name="notification_received">Sin notificaciones</string>
@@ -21,11 +18,13 @@
     <string name="instagram_notification">Notificación de Instagram</string>
     <string name="whatsapp_notification">Notificación de Whatsapp</string>
     <string name="call_notification">Notificación de llamada</string>
-    <string name="other_notification">Otra Notification</string>
-    <string name="metric_speed_zeroed">0 km/h</string>
-    <string name="imperial_speed_zeroed">0 mph</string>
+    <string name="other_notification">Otra notificación</string>
     <string name="contact_title">Contacto</string>
     <string name="help_title">Ayuda</string>
-    <string name="about_title">Acerca de...</string>
+    <string name="about_title">Acerca de…</string>
+    <string name="reset_notification">Ya he leído las notificaciones</string>
+    <string name="notification_deleted">Notificationes eliminadas del teléfono y del HUD</string>
+    <string name="device_connected"> - Conectado</string>
+    <string name="device_not_connected"> - No Conectado</string>
 
 </resources>

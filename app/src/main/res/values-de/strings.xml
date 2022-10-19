@@ -1,0 +1,30 @@
+<resources>
+    <string name="notification_listener_service_explanation">Ich benötige Zugriff, um Benachrichtigungen von Ihrem Telefon zu erhalten. Können Sie mir Zugriff gewähren?</string>
+    <string name="yes">Ja</string>
+    <string name="no">Nö</string>
+    <string name="socket_error_title">Bluetooth-Socket-Fehler</string>
+    <string name="sensor_val">- ºC</string>
+    <string name="paired_device">Keine verknüpften Geräte</string>
+    <string name="notification_received">keine Benachrichtigungen</string>
+    <string name="speed_data">Geschwindigkeit</string>
+    <string name="metric_imperial">Metrische einheiten (km/h)</string>
+    <string name="socket_error_message">Kommunikationsfehler mit dem HC-06-Gerät. Ist Zustand?</string>
+    <string name="app_about_text">App von Álvaro Rubio und Francisco Cirka</string>
+    <string name="app_help_text">Sie müssen der App nur Berechtigungen erteilen und sicherstellen, dass das HUD eingeschaltet ist, bevor Sie die App öffnen.</string>
+    <string name="app_contact_text">Sie erreichen uns unter: alruad@gmail.com</string>
+    <string name="metric_units">Metrische einheiten (km/h)</string>
+    <string name="imperial_units">Uimperiale einheiten (mph)</string>
+    <string name="facebook_notification">Facebook-Benachrichtigung</string>
+    <string name="instagram_notification">Instagram-Benachrichtigung</string>
+    <string name="whatsapp_notification">Whatsapp-Benachrichtigung</string>
+    <string name="call_notification">Anrufbenachrichtigung</string>
+    <string name="other_notification">andere Benachrichtigung</string>
+    <string name="contact_title">Kontakt</string>
+    <string name="help_title">Hilfe</string>
+    <string name="about_title">Um…</string>
+    <string name="reset_notification">Über uns…</string>
+    <string name="notification_deleted">Benachrichtigungen von telefon und HUD entfernt</string>
+    <string name="device_connected"> - Verbunden</string>
+    <string name="device_not_connected"> - Nicht verbunden</string>
+
+</resources>

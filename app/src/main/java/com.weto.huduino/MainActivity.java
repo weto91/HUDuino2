@@ -25,6 +25,7 @@ import android.text.TextUtils;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 import java.io.IOException;
@@ -46,11 +47,12 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
     private TextView sensorData;
     private TextView deviceInfo;
     private TextView speedData;
+    private TextView deviceConectivity;
     private SwitchCompat metricImperial;
 
     // BT
     private boolean socketOk = false;
-    private String deviceOk = " - Not connected";
+    private String deviceOk = null;
     private String deviceItem = String.valueOf(R.string.paired_device);
     private final UUID spp = UUID.fromString("00001101-0000-1000-8000-00805F9B34FB");
     private final BluetoothAdapter bluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
@@ -70,6 +72,8 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
         sensorData = this.findViewById(R.id.text_sensor_data);
         metricImperial = this.findViewById(R.id.switch_metric_imperial);
         speedData = this.findViewById(R.id.text_speed_data);
+        deviceConectivity = this.findViewById(R.id.text_device_conectivity);
+        Button resetNotification = this.findViewById(R.id.button_reset_notification);
 
         // If the user did not turn the notification listener service on we prompt him to do so
         if (!isNotificationServiceEnabled()) {
@@ -112,12 +116,25 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
 
         metricImperial.setOnCheckedChangeListener((compoundButton, b) -> {
             MainActivity.this.updateSpeed(null);
+            String speedUnit;
             if(metricImperial.isChecked()){
                 metricImperial.setText(R.string.metric_units);
+                speedUnit = "MET";
             }
             else{
                 metricImperial.setText(R.string.imperial_units);
+                speedUnit = "IMP";
             }
+            bytes = speedUnit.getBytes(Charset.defaultCharset());
+            if(socketOk) {mConnectedThread.write(bytes);}
+        });
+
+        resetNotification.setOnClickListener(v -> {
+            notificationData.setTextColor(Color.WHITE);
+            notificationData.setText(R.string.notification_received);
+            bytes = "RSN".getBytes(Charset.defaultCharset());
+            if(socketOk) {mConnectedThread.write(bytes);}
+            Toast.makeText(MainActivity.this, R.string.notification_deleted, Toast.LENGTH_LONG).show();
         });
     }
 
@@ -151,24 +168,30 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
 
     private void receiveNotification(int notificationCode) {
         notificationData.setTextColor(Color.RED);
+        String sendNotification = String.valueOf(R.string.notification_received);
         switch (notificationCode) {
             case NotificationService.InterceptedNotificationCode.FACEBOOK_CODE:
                 notificationData.setText(R.string.facebook_notification);
+                sendNotification = "FBK";
                 break;
             case NotificationService.InterceptedNotificationCode.INSTAGRAM_CODE:
                 notificationData.setText(R.string.instagram_notification);
+                sendNotification = "IGM";
                 break;
             case NotificationService.InterceptedNotificationCode.WHATSAPP_CODE:
                 notificationData.setText(R.string.whatsapp_notification);
+                sendNotification = "WSP";
                 break;
             case NotificationService.InterceptedNotificationCode.DIALER_CODE:
                 notificationData.setText(R.string.call_notification);
+                sendNotification = "ICL";
                 break;
             case NotificationService.InterceptedNotificationCode.OTHER_NOTIFICATIONS_CODE:
                 notificationData.setText(R.string.other_notification);
+                sendNotification = "OTR";
                 break;
         }
-        bytes = notificationData.getText().toString().getBytes(Charset.defaultCharset());
+        bytes = sendNotification.getBytes(Charset.defaultCharset());
         if(socketOk) {mConnectedThread.write(bytes);}
     }
 
@@ -262,19 +285,19 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
             try {
                 mmSocket.connect();
                 socketOk = true;
-                deviceOk = " - Connected";
+                runOnUiThread(() ->  deviceConectivity.setText(R.string.device_connected));
             } catch (IOException connectException) {
                 try {
                     mmSocket.close();
                     socketOk = false;
-                    deviceOk = " - Not connected";
+                    runOnUiThread(() ->  deviceConectivity.setText(R.string.device_not_connected));
                 } catch (IOException closeException) {
                     Log.e(sTag, "Could not close the client socket", closeException);
                 }
-                runOnUiThread(() -> deviceInfo.setText(String.format("%s%s", deviceItem, deviceOk)));
+                runOnUiThread(() -> deviceInfo.setText(deviceItem));
                 return;
             }
-            runOnUiThread(() -> deviceInfo.setText(String.format("%s%s", deviceItem, deviceOk)));
+            runOnUiThread(() -> deviceInfo.setText(deviceItem));
             manageMyConnectedSocket(mmSocket);
         }
 
@@ -350,25 +373,25 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
         }
         String strCurrSpeed = String.valueOf(Math.round(nCurrSpeed));
         if (this.useMetricUnits()) {
-            String kmh = strCurrSpeed + " km/h";
-            System.out.println(kmh);
-            speedData.setText(kmh);
+            System.out.println(strCurrSpeed);
+            speedData.setText(String.format("%s km/h", strCurrSpeed));
             if (nCurrSpeed == 0) {
                 speedData.setText(R.string.metric_speed_zeroed);
             }
-            bytes = kmh.getBytes(Charset.defaultCharset());
+            bytes = strCurrSpeed.getBytes(Charset.defaultCharset());
             if(socketOk) {
                 mConnectedThread.write(bytes);
             }
         } else {
-            String mph = strCurrSpeed + " mph";
-            System.out.println(mph);
+            System.out.println(strCurrSpeed);
+            speedData.setText(String.format("%s mph", strCurrSpeed));
             if (nCurrSpeed == 0) {
                 speedData.setText(R.string.imperial_speed_zeroed);
             }
-            speedData.setText(mph);
-            bytes = mph.getBytes(Charset.defaultCharset());
-            if(socketOk) {mConnectedThread.write(bytes);}
+            bytes = strCurrSpeed.getBytes(Charset.defaultCharset());
+            if(socketOk) {
+                mConnectedThread.write(bytes);
+            }
         }
     }
 }

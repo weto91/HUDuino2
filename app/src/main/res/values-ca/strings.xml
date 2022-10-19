@@ -1,0 +1,30 @@
+<resources>
+    <string name="notification_listener_service_explanation">Necessito accés per obtenir les notificacions del teu telèfon. Podries donar-me accés?</string>
+    <string name="yes">Si</string>
+    <string name="no">No</string>
+    <string name="socket_error_title">Error bluetooth</string>
+    <string name="sensor_val">- ºC</string>
+    <string name="paired_device">No hi ha dispositius vinculats</string>
+    <string name="notification_received">Sense notificacions</string>
+    <string name="speed_data">Velocitat</string>
+    <string name="metric_imperial">Unitats mètriques (km/h)</string>
+    <string name="socket_error_message">Error en la comunicació amb el dispositiu HC-06. Està encès?</string>
+    <string name="app_about_text">App feta per Álvaro Rubio i Francisco Cirka</string>
+    <string name="app_help_text">Només heu de donar permisos a l\'aplicació i assegurar-vos que l\'HUD estigui encès abans d\'obrir l\'aplicació</string>
+    <string name="app_contact_text">Pots contactar amb nosaltres a: alruad@gmail.com</string>
+    <string name="metric_units">UUnitats mètriques (km/h)</string>
+    <string name="imperial_units">Unitats imperials (mph)</string>
+    <string name="facebook_notification">Notificació de Facebook</string>
+    <string name="instagram_notification">Notificació de Instagram</string>
+    <string name="whatsapp_notification">Notificació de Whatsapp</string>
+    <string name="call_notification">Notificació de trucada</string>
+    <string name="other_notification">Una altra notificació</string>
+    <string name="contact_title">Contacte</string>
+    <string name="help_title">Ajuda</string>
+    <string name="about_title">Quant a…</string>
+    <string name="reset_notification">Ja he llegit les notificacions</string>
+    <string name="notification_deleted">Notifications eliminades del telèfon i del HUD</string>
+    <string name="device_connected"> - Connectat</string>
+    <string name="device_not_connected"> - No Connectat</string>
+
+</resources>
