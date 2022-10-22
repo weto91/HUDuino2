@@ -3,7 +3,6 @@
     <string name="yes">Si</string>
     <string name="no">No</string>
     <string name="socket_error_title">Error en el socket bluetooth</string>
-    <string name="sensor_val">- ºC</string>
     <string name="paired_device">No hay dispositivos vinculados</string>
     <string name="notification_received">Sin notificaciones</string>
     <string name="speed_data">Velocidad</string>

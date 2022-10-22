@@ -3,7 +3,6 @@
     <string name="yes">Ja</string>
     <string name="no">Nö</string>
     <string name="socket_error_title">Bluetooth-Socket-Fehler</string>
-    <string name="sensor_val">- ºC</string>
     <string name="paired_device">Keine verknüpften Geräte</string>
     <string name="notification_received">keine Benachrichtigungen</string>
     <string name="speed_data">Geschwindigkeit</string>

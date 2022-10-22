@@ -32,6 +32,8 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.nio.charset.Charset;
+import java.util.Arrays;
+import java.util.List;
 import java.util.Set;
 import java.util.UUID;
 
@@ -44,7 +46,8 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
 
     // GUI
     private TextView notificationData;
-    private TextView sensorData;
+    private TextView sensorTempData;
+    private TextView sensorHumiData;
     private TextView deviceInfo;
     private TextView speedData;
     private TextView deviceConectivity;
@@ -52,7 +55,6 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
 
     // BT
     private boolean socketOk = false;
-    private String deviceOk = null;
     private String deviceItem = String.valueOf(R.string.paired_device);
     private final UUID spp = UUID.fromString("00001101-0000-1000-8000-00805F9B34FB");
     private final BluetoothAdapter bluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
@@ -69,7 +71,8 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
         // Find the GUI objects on activity_main.xml
         notificationData = this.findViewById(R.id.text_notification_data);
         deviceInfo = this.findViewById(R.id.text_device_info);
-        sensorData = this.findViewById(R.id.text_sensor_data);
+        sensorTempData = this.findViewById(R.id.text_sensor_temp_data);
+        sensorHumiData = this.findViewById(R.id.text_sensor_humi_data);
         metricImperial = this.findViewById(R.id.switch_metric_imperial);
         speedData = this.findViewById(R.id.text_speed_data);
         deviceConectivity = this.findViewById(R.id.text_device_conectivity);
@@ -299,6 +302,10 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
             }
             runOnUiThread(() -> deviceInfo.setText(deviceItem));
             manageMyConnectedSocket(mmSocket);
+            if(socketOk) {
+                byte[] send = "START".getBytes(Charset.defaultCharset());
+                mConnectedThread.write(send);
+            }
         }
 
         private void manageMyConnectedSocket(BluetoothSocket mmSocket) {
@@ -331,14 +338,18 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
 
         public void run() {
             // mmBuffer store for the stream
-            byte[] mmBuffer = new byte[2];
+            byte[] mmBuffer = new byte[10];
             int numBytes; // bytes returned from read()
             while (true) {
                 try {
                     numBytes = mmInStream.read(mmBuffer);
                     final String incomingMessage = new String(mmBuffer, 0, numBytes);
-                    Log.d(sTag, "InputStream: " + incomingMessage);
-                    runOnUiThread(() -> sensorData.setText(String.format("%s ºC", incomingMessage)));
+                    List<String> items = Arrays.asList(incomingMessage.split("\\u0020"));
+                    runOnUiThread(() -> {
+                        sensorTempData.setText(String.format("%sºC", items.get(0)));
+                        sensorHumiData.setText(String.format("%s%%", items.get(1)));
+                    });
+                   // runOnUiThread(() -> sensorHumiData.setText(String.format(items.get(1) + "%")));
                 } catch (IOException e) {
                     Log.d(sTag, "Input stream was disconnected", e);
                     break;

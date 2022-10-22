@@ -3,12 +3,11 @@
     <string name="yes">Oui</string>
     <string name="no">Non</string>
     <string name="socket_error_title">Erreur de prise bluetooth</string>
-    <string name="sensor_val">- ºC</string>
     <string name="paired_device">Aucun appareil lié</string>
     <string name="notification_received">Aucune notification</string>
     <string name="speed_data">La rapidité</string>
     <string name="metric_imperial">Unités métriques (km/h)</string>
-    <string name="socket_error_message">Erreur de communication avec l\'appareil HC-06. C'est en marche?</string>
+    <string name="socket_error_message">Erreur de communication avec l\'appareil HC-06. C\'est en marche?</string>
     <string name="app_about_text">Application réalisée par Álvaro Rubio et Francisco Cirka</string>
     <string name="app_help_text">Il vous suffit de donner les autorisations à l\'application et de vous assurer que le HUD est activé avant d\'ouvrir l\'application.</string>
     <string name="app_contact_text">Vous pouvez nous contacter à : alruad@gmail.com</string>

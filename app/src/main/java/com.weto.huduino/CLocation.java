@@ -8,7 +8,6 @@ public class CLocation extends Location {
 
     public CLocation(Location location, boolean useMetricUnits){
         super(location);
-        Log.i("INFO",location.toString());
         this.useMetricUnits = useMetricUnits;
     }
     public boolean getUseMetricUnits() {
@@ -41,7 +40,6 @@ public class CLocation extends Location {
         float nSpeed = super.getSpeed() * 3.6f;
         if(!this.getUseMetricUnits()){
             //Conversion from m/s to M/h
-            Log.i("INFO",String.valueOf(nSpeed));
             nSpeed =super.getSpeed() * 2.23693629f;
         }
         return nSpeed;

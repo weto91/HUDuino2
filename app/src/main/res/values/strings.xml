@@ -7,7 +7,6 @@
     <string name="yes">Yes</string>
     <string name="no">No</string>
     <string name="socket_error_title">Bluetooth error</string>
-    <string name="sensor_val">- ºC</string>
     <string name="paired_device">No paired device found.</string>
     <string name="notification_received">Without notifications</string>
     <string name="speed_data">Speed</string>
@@ -32,5 +31,7 @@
     <string name="notification_deleted">Notifications deleted in the phone and HUD</string>
     <string name="device_connected"> - Connected</string>
     <string name="device_not_connected"> - Not Connected</string>
+    <string name="sensor_temp_val" translatable="false">- ºC</string>
+    <string name="sensor_humi_val" translatable="false">- %</string>
 
 </resources>

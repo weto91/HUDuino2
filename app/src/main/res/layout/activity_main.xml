@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_height="match_parent"
     android:layout_width="match_parent"
     android:orientation="vertical"
@@ -56,19 +57,40 @@
             android:textSize="20sp"
             android:textColor="#FFFFFF"
             android:text="@string/metric_imperial"/>
-        <TextView
-            android:id="@+id/text_sensor_data"
+
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:text="@string/sensor_val"
-            android:textSize="50sp"
-            android:textColor="@color/white" />
+            android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/text_sensor_temp_data"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/sensor_temp_val"
+                    android:textColor="@color/white"
+                    android:layout_marginEnd="30dp"
+                    android:textSize="50sp" />
+
+                <TextView
+                    android:id="@+id/text_sensor_humi_data"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/sensor_humi_val"
+                    android:textColor="@color/white"
+                    android:textSize="50sp"
+                    android:layout_marginStart="30dp"
+                    tools:ignore="RtlHardcoded" />
+        </LinearLayout>
 
         <Button
             android:id="@+id/button_reset_notification"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="20sp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="10dp"
             android:text="@string/reset_notification" />
 </LinearLayout>
