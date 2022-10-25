@@ -1,4 +1,4 @@
-## <img src="https://i.ibb.co/QNzSJy4/1024-copia.png" data-canonical-src="https://i.ibb.co/QNzSJy4/1024-copia.png" width="25" height="25" />Description
+## <img src="https://i.ibb.co/QNzSJy4/1024-copia.png" data-canonical-src="https://i.ibb.co/QNzSJy4/1024-copia.png" width="25" height="25" /> Description
 HUDuino is an implementation of a HUD for bikers. This HUD will allows the biker to visualize the speed at which they are driving, the temperature inside the helmet, as well as the humidity, and they will be able to see if any notifications arrive on the phone while they are driving. 
 This project seeks to improve the safety of bikers, avoiding distractions by lowering the head or handling the phone. 
 Here you will find all the necessary resources to: 
