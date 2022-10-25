@@ -1,4 +1,4 @@
-## ![](https://i.ibb.co/JdDZjhM/1024.png =25x25) Description
+## <img src="https://i.ibb.co/QNzSJy4/1024-copia.png" data-canonical-src="https://i.ibb.co/QNzSJy4/1024-copia.png" width="25" height="25" />Description
 HUDuino is an implementation of a HUD for bikers. This HUD will allows the biker to visualize the speed at which they are driving, the temperature inside the helmet, as well as the humidity, and they will be able to see if any notifications arrive on the phone while they are driving. 
 This project seeks to improve the safety of bikers, avoiding distractions by lowering the head or handling the phone. 
 Here you will find all the necessary resources to: 
@@ -12,7 +12,9 @@ This project has three parts:
  - Android application
  - Arduino Sketch
  - Hardware construction
-## ![](https://www.freepnglogos.com/uploads/android-logo-png/android-logo-powerful-mobile-apps-for-those-with-disabilities-3.png =25x25) Android application 
+
+
+## <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Android_logo_%282014-2019%29.png/600px-Android_logo_%282014-2019%29.png" data-canonical-src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Android_logo_%282014-2019%29.png/600px-Android_logo_%282014-2019%29.png" width="25" height="25" /> Android application 
 The application will obtain several telemetries (described below) and send them via bluetooth to the Arduino device. It will also receive temperature and humidity data from the Arduino device.
 The telemetry obtained by the application are:
 - GPS Speed (Using Google API)
