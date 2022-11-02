@@ -13,11 +13,15 @@ This project has three parts:
  - Arduino Sketch
  - Hardware construction
 
+------------
+
 ### Next steps:
- - Add all necessary documentation and video of operation in README.md.
- - Redesign the shell to better fit any full-face helmet
- - Fix the problems that arise in the code.
- - Modify the wiring diagram to use the development board wemos d1 mini instead of nodemcu ESP12
+ - [ ] Add all necessary documentation and video of operation in README.md.
+ - [ ] Redesign the shell to better fit any full-face helmet
+ - [ ] Fix the problems that arise in the code.
+ - [ ] Modify the wiring diagram to use the development board wemos d1 mini instead of nodemcu ESP12
+
+------------
 
 ## <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Android_logo_%282014-2019%29.png/600px-Android_logo_%282014-2019%29.png" data-canonical-src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Android_logo_%282014-2019%29.png/600px-Android_logo_%282014-2019%29.png" width="25" height="25" /> Android application 
 The application will obtain several telemetries (described below) and send them via bluetooth to the Arduino device. It will also receive temperature and humidity data from the Arduino device.
