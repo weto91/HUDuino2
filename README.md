@@ -1,4 +1,15 @@
 This project is under development. at this point everything is working, but there are some design issues that needs to be fixed. You can see the next steps below.
+
+------------
+
+### Next steps:
+ - [ ] Add all necessary documentation and video of operation in README.md.
+ - [ ] Redesign the shell to better fit any full-face helmet
+ - [ ] Fix the problems that arise in the code.
+ - [ ] Modify the wiring diagram to use the development board wemos d1 mini instead of nodemcu ESP12
+
+------------
+
 ## <img src="https://i.ibb.co/QNzSJy4/1024-copia.png" data-canonical-src="https://i.ibb.co/QNzSJy4/1024-copia.png" width="25" height="25" /> Description
 HUDuino is an implementation of a HUD for bikers. This HUD will allows the biker to visualize the speed at which they are driving, the temperature inside the helmet, as well as the humidity, and they will be able to see if any notifications arrive on the phone while they are driving. 
 This project seeks to improve the safety of bikers, avoiding distractions by lowering the head or handling the phone. 
@@ -14,15 +25,7 @@ This project has three parts:
  - Arduino Sketch
  - Hardware construction
 
-------------
 
-### Next steps:
- - [ ] Add all necessary documentation and video of operation in README.md.
- - [ ] Redesign the shell to better fit any full-face helmet
- - [ ] Fix the problems that arise in the code.
- - [ ] Modify the wiring diagram to use the development board wemos d1 mini instead of nodemcu ESP12
-
-------------
 
 ## <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Android_logo_%282014-2019%29.png/600px-Android_logo_%282014-2019%29.png" data-canonical-src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Android_logo_%282014-2019%29.png/600px-Android_logo_%282014-2019%29.png" width="25" height="25" /> Android application 
 The application will obtain several telemetries (described below) and send them via bluetooth to the Arduino device. It will also receive temperature and humidity data from the Arduino device.
