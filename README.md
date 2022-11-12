@@ -62,4 +62,7 @@ In addition, it will continuously read the DHT-22 sensor, display the humidity a
 They are prepared to house all the components, wiring everything in the tightest way possible so that the whole occupies as little as possible inside the helmet.
 
 Please note that this part is still under development. Soon I will be uploading the updated designs so that it fits better inside any helmet.
-
+ ## <img src="https://w7.pngwing.com/pngs/948/752/png-transparent-power-cord-electrical-cable-electrical-wires-cable-others-miscellaneous-text-electrical-wires-cable-thumbnail.png" data-canonical-src="https://w7.pngwing.com/pngs/948/752/png-transparent-power-cord-electrical-cable-electrical-wires-cable-others-miscellaneous-text-electrical-wires-cable-thumbnail.png" width="25" height="25" /> Wiring
+ Use this diagram to wire your own HUDuino:
+ 
+ ![enter image description here](https://raw.githubusercontent.com/weto91/HUDuino2/master/RESOURCES/DOC/ProtoBoard_connections.png)
