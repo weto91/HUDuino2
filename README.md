@@ -90,4 +90,6 @@ Please note that this part is still under development. Soon I will be uploading 
 - [Mirror sticker 10u (1,37€)](https://es.aliexpress.com/item/1005004340986514.html?spm=a2g0o.productlist.0.0.47c216585laSrf&algo_pvid=62572371-607a-4a63-b486-daa148fc7792&algo_exp_id=62572371-607a-4a63-b486-daa148fc7792-11&pdp_ext_f=%7B%22sku_id%22:%2212000028823906125%22%7D&pdp_npi=2@dis!EUR!6.97!4.18!!!!!@2100bdd816682746720324656ef3f0!12000028823906125!sea&curPageLogUid=AUlcvPsPnDZH)
 - [reflective sticker (1,83€)](https://es.aliexpress.com/item/1005002937614641.html?spm=a2g0o.productlist.0.0.6e994883wuTLj9&algo_pvid=d99f8360-8d0c-4a7d-a1bf-903c82f83427&algo_exp_id=d99f8360-8d0c-4a7d-a1bf-903c82f83427-0&pdp_ext_f=%7B%22sku_id%22:%2212000022875656100%22%7D&pdp_npi=2@dis!EUR!3.48!2.27!!!!!@2100bdf116682748125408182e2a79!12000022875656100!sea&curPageLogUid=BnKT2eEYIGgk)
 - [AWG24 wire 5M (2€)](https://es.aliexpress.com/item/1005003164183920.html?spm=a2g0o.productlist.0.0.36c67d54R4NPIo&algo_pvid=814afe25-46a6-4b76-b57b-6f4c5cf1b04f&algo_exp_id=814afe25-46a6-4b76-b57b-6f4c5cf1b04f-2&pdp_ext_f=%7B%22sku_id%22:%2212000024441742097%22%7D&pdp_npi=2@dis!EUR!2.0!2.0!!!!!@2100bdd716682748775365983e40be!12000024441742097!sea&curPageLogUid=kwE3AlWTJXoE)
+
+
 **Total cost: 18,07€**
