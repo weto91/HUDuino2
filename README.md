@@ -82,14 +82,27 @@ Please note that this part is still under development. Soon I will be uploading 
 | VIN | + TC4056A |
 
  ## <img src="https://w7.pngwing.com/pngs/789/777/png-transparent-computer-icons-tinyurl-hyperlink-symbol-url-shortening-chain-miscellaneous-text-technic.png" data-canonical-src="https://w7.pngwing.com/pngs/789/777/png-transparent-computer-icons-tinyurl-hyperlink-symbol-url-shortening-chain-miscellaneous-text-technic.png" width="25" height="25" /> Links
+
+Aliexpress:
 - [Wemos D1 Mini V3.0 (3,54€)](https://es.aliexpress.com/item/1005001621784437.html?spm=a2g0o.productlist.0.0.7ca3470fL3Tjxw&algo_pvid=67611696-1d3b-4081-b543-5a0c33e4cd6a&algo_exp_id=67611696-1d3b-4081-b543-5a0c33e4cd6a-0&pdp_ext_f=%7B%22sku_id%22:%2212000016846399621%22%7D&pdp_npi=2@dis!EUR!2.39!1.98!!!1.41!!@2100bb4916682736658158617e1742!12000016846399621!sea&curPageLogUid=pXBOqu7UFDyW)
 - [0,96 inch OLED SSD1306 (2,37€)](https://es.aliexpress.com/item/4001028369082.html?spm=a2g0o.productlist.0.0.76581d87iZrQez&algo_pvid=ad3f0086-4147-43a5-90a4-a13214d53591&algo_exp_id=ad3f0086-4147-43a5-90a4-a13214d53591-6&pdp_ext_f=%7B%22sku_id%22:%2210000013573591133%22%7D&pdp_npi=2@dis!EUR!2.05!1.62!!!0.75!!@2100bde316682737848228485e1652!10000013573591133!sea&curPageLogUid=7cHKZu6GKCVn)
 - [DHT-22 with PCB (2,46€)](https://es.aliexpress.com/item/33037061522.html?spm=a2g0o.productlist.0.0.2cdc8361tW3RSp&algo_pvid=5b1ef29f-1949-4dbf-be44-6ad1cb44c291&algo_exp_id=5b1ef29f-1949-4dbf-be44-6ad1cb44c291-2&pdp_ext_f=%7B%22sku_id%22:%2267335069429%22%7D&pdp_npi=2@dis!EUR!1.87!1.83!!!0.63!!@0b0a119a16682744707767295ec691!67335069429!sea&curPageLogUid=OeRahkAPFQUo)
 - [HC-06 compatible (2,65€)](https://es.aliexpress.com/item/1005004472598061.html?spm=a2g0o.productlist.0.0.73b97c9eXn1oZu&algo_pvid=d0a2c52c-a08c-4e6d-a672-78f453b721e0&algo_exp_id=d0a2c52c-a08c-4e6d-a672-78f453b721e0-3&pdp_ext_f=%7B%22sku_id%22:%2212000029285661878%22%7D&pdp_npi=2@dis!EUR!2.59!2.31!!!!!@0b0a182b16682745338526291ee8f7!12000029285661878!sea&curPageLogUid=Cy27QXzzQIzX)
-- [TC4056A (1,85€)](https://es.aliexpress.com/item/1005002925698704.html?spm=a2g0o.productlist.0.0.b1ba258fuYD9ns&algo_pvid=998b2c49-4ff3-4040-b3a1-368deb075bb5&algo_exp_id=998b2c49-4ff3-4040-b3a1-368deb075bb5-0&pdp_ext_f=%7B%22sku_id%22:%2212000027422694098%22%7D&pdp_npi=2@dis!EUR!3.89!2.72!!!2.03!!@2100bdf016682746114102885eb72d!12000027422694098!sea&curPageLogUid=dz225q3W1imp)
+- [TC4056A USB-C (1,85€)](https://es.aliexpress.com/item/1005002925698704.html?spm=a2g0o.productlist.0.0.b1ba258fuYD9ns&algo_pvid=998b2c49-4ff3-4040-b3a1-368deb075bb5&algo_exp_id=998b2c49-4ff3-4040-b3a1-368deb075bb5-0&pdp_ext_f=%7B%22sku_id%22:%2212000027422694098%22%7D&pdp_npi=2@dis!EUR!3.89!2.72!!!2.03!!@2100bdf016682746114102885eb72d!12000027422694098!sea&curPageLogUid=dz225q3W1imp)
 - [Mirror sticker 10u (1,37€)](https://es.aliexpress.com/item/1005004340986514.html?spm=a2g0o.productlist.0.0.47c216585laSrf&algo_pvid=62572371-607a-4a63-b486-daa148fc7792&algo_exp_id=62572371-607a-4a63-b486-daa148fc7792-11&pdp_ext_f=%7B%22sku_id%22:%2212000028823906125%22%7D&pdp_npi=2@dis!EUR!6.97!4.18!!!!!@2100bdd816682746720324656ef3f0!12000028823906125!sea&curPageLogUid=AUlcvPsPnDZH)
 - [reflective sticker (1,83€)](https://es.aliexpress.com/item/1005002937614641.html?spm=a2g0o.productlist.0.0.6e994883wuTLj9&algo_pvid=d99f8360-8d0c-4a7d-a1bf-903c82f83427&algo_exp_id=d99f8360-8d0c-4a7d-a1bf-903c82f83427-0&pdp_ext_f=%7B%22sku_id%22:%2212000022875656100%22%7D&pdp_npi=2@dis!EUR!3.48!2.27!!!!!@2100bdf116682748125408182e2a79!12000022875656100!sea&curPageLogUid=BnKT2eEYIGgk)
 - [AWG24 wire 5M (2€)](https://es.aliexpress.com/item/1005003164183920.html?spm=a2g0o.productlist.0.0.36c67d54R4NPIo&algo_pvid=814afe25-46a6-4b76-b57b-6f4c5cf1b04f&algo_exp_id=814afe25-46a6-4b76-b57b-6f4c5cf1b04f-2&pdp_ext_f=%7B%22sku_id%22:%2212000024441742097%22%7D&pdp_npi=2@dis!EUR!2.0!2.0!!!!!@2100bdd716682748775365983e40be!12000024441742097!sea&curPageLogUid=kwE3AlWTJXoE)
-
-
 **Total cost: 18,07€**
+
+Amazon:
+- [Wemos D1 Mini V3.0 (6,49€)](https://www.amazon.es/AZDelivery-D1-Mini-desarrollo-compatible/dp/B01N9RXGHY/ref=sr_1_3?__mk_es_ES=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=3BPH1G4K9ABE9&keywords=wemos%2bd1%2bmini&qid=1668275549&qu=eyJxc2MiOiIzLjgyIiwicXNhIjoiMi44NiIsInFzcCI6IjIuNjEifQ==&refinements=p_76:831314031&rnid=831276031&rps=1&sprefix=wemos%2bd1%2bmini,aps,95&sr=8-3&th=1)
+- [0,96 inch OLED SSD1306 (8,99€)](https://www.amazon.es/dp/B01L9GC470/ref=twister_B082M8VWLT?_encoding=UTF8&psc=1)
+- [DHT-22 with PCB (8,99€)](https://www.amazon.es/temperatura-humedad-Arduino-Raspberry-AZDelivery/dp/B078SVZB1X/ref=sr_1_5?__mk_es_ES=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=1ZLTSD2LY2RP6&keywords=dht22&qid=1668275685&qu=eyJxc2MiOiI0LjY1IiwicXNhIjoiMy45MiIsInFzcCI6IjMuNTEifQ==&sprefix=dht22,aps,107&sr=8-5)
+- [HC-06 compatible (9,99€)](https://www.amazon.es/dp/B0722MD4FY/ref=twister_B082KJ7KD5?_encoding=UTF8&psc=1)
+- [TC4056A Micro-USB (4,49€)](https://www.amazon.es/AZDelivery-TP4056-Micro-Laderegler-Lithium/dp/B089QJZ3QP/ref=sr_1_16?keywords=TC4056A&qid=1668275859&qu=eyJxc2MiOiIwLjAwIiwicXNhIjoiMC4wMCIsInFzcCI6IjAuMDAifQ==&sr=8-16&th=1)
+- [Mirror sticker 10u (6,99€)](https://www.amazon.es/gp/product/B09B7799BC/ref=ppx_yo_dt_b_asin_title_o03_s00?ie=UTF8&psc=1)
+- [reflective sticker 2u (10,99€)](https://www.amazon.es/Hud-Pel%C3%ADcula-reflectante-parabrisas-unidades/dp/B09TK36C1N/ref=sr_1_5?keywords=pelicula%20reflectante%20parabrisas&qid=1668275997&refinements=p_76:831314031&rnid=831276031&rps=1&sr=8-5)
+- [AWG24 wire 60M (13,90€)](https://www.amazon.es/Velleman-MOWM-60m-Cable-se%C3%B1al/dp/B001IRVDV4/ref=sr_1_1?keywords=awg24&qid=1668276118&qu=eyJxc2MiOiIzLjI3IiwicXNhIjoiMS4wMCIsInFzcCI6IjAuMDAifQ==&refinements=p_76:831314031&rnid=831276031&rps=1&sr=8-1)
+**Total cost: 70,83€**
+
+(Obviously it is better to wait for aliexpress)
