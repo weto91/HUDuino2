@@ -3,7 +3,7 @@ This project is under development. at this point everything is working, but ther
 ------------
 
 ### Next steps:
- - [ ] Add all necessary documentation and video of operation in README.md.
+ - [ ] Add video of operation in README.md.
  - [ ] Redesign the shell to better fit any full-face helmet
  - [ ] Fix the problems that arise in the code.
  - [ ] Modify the wiring diagram to use the development board wemos d1 mini instead of nodemcu ESP12
