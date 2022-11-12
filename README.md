@@ -92,6 +92,8 @@ Aliexpress:
 - [Mirror sticker 10u (1,37€)](https://es.aliexpress.com/item/1005004340986514.html?spm=a2g0o.productlist.0.0.47c216585laSrf&algo_pvid=62572371-607a-4a63-b486-daa148fc7792&algo_exp_id=62572371-607a-4a63-b486-daa148fc7792-11&pdp_ext_f=%7B%22sku_id%22:%2212000028823906125%22%7D&pdp_npi=2@dis!EUR!6.97!4.18!!!!!@2100bdd816682746720324656ef3f0!12000028823906125!sea&curPageLogUid=AUlcvPsPnDZH)
 - [reflective sticker (1,83€)](https://es.aliexpress.com/item/1005002937614641.html?spm=a2g0o.productlist.0.0.6e994883wuTLj9&algo_pvid=d99f8360-8d0c-4a7d-a1bf-903c82f83427&algo_exp_id=d99f8360-8d0c-4a7d-a1bf-903c82f83427-0&pdp_ext_f=%7B%22sku_id%22:%2212000022875656100%22%7D&pdp_npi=2@dis!EUR!3.48!2.27!!!!!@2100bdf116682748125408182e2a79!12000022875656100!sea&curPageLogUid=BnKT2eEYIGgk)
 - [AWG24 wire 5M (2€)](https://es.aliexpress.com/item/1005003164183920.html?spm=a2g0o.productlist.0.0.36c67d54R4NPIo&algo_pvid=814afe25-46a6-4b76-b57b-6f4c5cf1b04f&algo_exp_id=814afe25-46a6-4b76-b57b-6f4c5cf1b04f-2&pdp_ext_f=%7B%22sku_id%22:%2212000024441742097%22%7D&pdp_npi=2@dis!EUR!2.0!2.0!!!!!@2100bdd716682748775365983e40be!12000024441742097!sea&curPageLogUid=kwE3AlWTJXoE)
+
+
 **Total cost: 18,07€**
 
 Amazon:
@@ -103,6 +105,8 @@ Amazon:
 - [Mirror sticker 10u (6,99€)](https://www.amazon.es/gp/product/B09B7799BC/ref=ppx_yo_dt_b_asin_title_o03_s00?ie=UTF8&psc=1)
 - [reflective sticker 2u (10,99€)](https://www.amazon.es/Hud-Pel%C3%ADcula-reflectante-parabrisas-unidades/dp/B09TK36C1N/ref=sr_1_5?keywords=pelicula%20reflectante%20parabrisas&qid=1668275997&refinements=p_76:831314031&rnid=831276031&rps=1&sr=8-5)
 - [AWG24 wire 60M (13,90€)](https://www.amazon.es/Velleman-MOWM-60m-Cable-se%C3%B1al/dp/B001IRVDV4/ref=sr_1_1?keywords=awg24&qid=1668276118&qu=eyJxc2MiOiIzLjI3IiwicXNhIjoiMS4wMCIsInFzcCI6IjAuMDAifQ==&refinements=p_76:831314031&rnid=831276031&rps=1&sr=8-1)
+
+
 **Total cost: 70,83€**
 
 (Obviously it is better to wait for aliexpress)
