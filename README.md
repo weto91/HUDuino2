@@ -38,22 +38,28 @@ The telemetry obtained by the application are:
    - Incoming calls (Considers the official android and samsung call application. Other applications of other brands are not contemplated, below it will be described how to add them)
    - The rest of the notifications will be ignored (Although they can be shown by modifying a bit of code)
 
-### Add new applications to show their notifications
+## <img src="https://www.nicepng.com/png/detail/207-2079566_arduino-1-logo-png-transparent-arduino-logo-png.png" data-canonical-src="https://www.nicepng.com/png/detail/207-2079566_arduino-1-logo-png-transparent-arduino-logo-png.png" width="25" height="25" /> Arduino Sketch
 
-In NotificationService.java:
+The Sketch is prepared to be used with the following components:
+- ESP8266, any one will do, but so that it takes up as little space as possible and can fit in the case I have designed, it will have to be a Wemos D1 mini (or a replica)
+- 0.96 inch I2C OLED screen. Any will do, but I recommend white or blue for better visibility.
+- DHT22 temperature sensor, in this project the version with circuit is used, since it includes the resistance that the sensor needs to work correctly. However, we must eliminate the plastic that covers the sensor, thus saving space.
+- HC-06 bluetooth module. The HC-05 model would also work, but to reduce costs and simplify the code, this model has been chosen.
+- TC4056A, to charge the battery. I have chosen this model because it allows you to charge the battery while using the product, it also takes up very little space and is easy to use. It has USB-C.
+- HAC-006 battery. It is the one used in the Nintendo Switch joycons. I have chosen this one because of its small size, durability and because it is cheap on amazon.
+- The cables must be fine. CAT-5 network cables or AWG24 electrical cable can be used.
+### How its works:
+The sketch repeats its operation every 0.1 seconds. It listens for SoftwareSerial (Bluetooth). It makes a cut of what is received, making sure to get only 3 characters for each reception, according to the received characters, through control structures, it will do different actions:
+- Switch between KM/h and mph
+- Show GPS speed
+- Warn if any notification arrives
 
-> We will have to add a new static variable of type string in the ApplicationPackageNames class, in the value of the variable we will put the full name of the application (com.xxxx.appname)
-> 
-> In the InterceptedNotificationCode class we will create another static variable, type int in which we will introduce a number greater than the existing ones (normally 6)
-> 
-> In the matchNotificationCode function we will have a case type control structure. In it we will add a new case and introduce the name of the package with a return of the code created previously.
+In addition, it will continuously read the DHT-22 sensor, display the humidity and temperature values on the screen and send them via SoftwareSerial to the smartphone.
 
+ ## <img src="https://www.freepnglogos.com/uploads/wrench/wrench-logo-png-gear-hard-repair-fix--0.png" data-canonical-src="https://www.freepnglogos.com/uploads/wrench/wrench-logo-png-gear-hard-repair-fix--0.png" width="25" height="25" /> 3D case
+ The case has been designed with SolidWorks. The editable SLDPRT files are attached, as well as the STL if you want to print them directly.
 
-In MainActivity.java file:
+They are prepared to house all the components, wiring everything in the tightest way possible so that the whole occupies as little as possible inside the helmet.
 
-> In the MainActivity.java file you will have to modify the receiveNotification function. In this function there is a case control structure, we will have to add one more case by modifying only the application code (1,2,3,4...), the string to be displayed in the corresponding TextView and the sendNotification variable. This variable will have to have a string of 3 characters that are different from those already described in the contemplated applications.
+Please note that this part is still under development. Soon I will be uploading the updated designs so that it fits better inside any helmet.
 
-And this is everything. 
-
-### Enable "Other notifications"
-You just need to remove the negation symbol from the if structure control inside the onNotificationPosted function in the NotificationService.java file
